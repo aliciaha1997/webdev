@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia Ngoc Diep Ha</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+    <link rel="icon" href="../css/logo.gif">
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="top-bar">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li><a href="#" class="hover">
+                    <figure>
+                        <img src="../css/planet.png" width=30px>
+                    </figure>
+                </a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </div>
+
+    <!-- Iterate articles-->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h1 class=mb-4>Blog Articles</h1>
+                <a href="/articles/new" class="button success hollow large">Create New Article</a>
+            </div>
+        </div>
+
+        <% articles.forEach(article => { %>
+        <div class="card mt-4">
+            <%= article.title %>
+        </div>
+        <% })%>
+
+    </div>
+
+</body>
+
+<footer>&copy; Copyright 2021 Alicia Ngoc Diep Ha</footer>
+
+
+</html>

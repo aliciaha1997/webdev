@@ -1,0 +1,73 @@
+body {
+    background: url(bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img {
+    vertical-align: middle;
+    padding: 0%;
+}
+
+.hover figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover figure:hover img {
+	opacity: .5;
+}
+
+h1 {
+    margin: 30px;
+    color: whitesmoke;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.top-bar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent;
+    height: 70px;
+}
+
+.top-bar ul {
+    background-color: transparent !important;
+}
+
+.top-bar li a {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+.top-bar a:hover {
+    color: turquoise;
+    border: turquoise;
+}
+
+div {
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    box-shadow: black;
+    opacity: 0.7;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
