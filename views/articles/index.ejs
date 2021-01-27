@@ -30,14 +30,22 @@
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="large-12 cell">
-                <h1 class=mb-4>Blog Articles</h1>
+                <h1 class=mb-5>Alicia's Blog</h1>
                 <a href="/articles/new" class="button success hollow large">Create New Article</a>
             </div>
         </div>
 
         <% articles.forEach(article => { %>
-        <div class="card mt-4">
-            <%= article.title %>
+        <div class="card mt-6">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= article.title %>
+                </h4>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= article.createdAt.toLocaleDateString() %>
+                </div>
+                <div class="card-text mb-2"><%=article.description %></div> 
+            </div>
         </div>
         <% })%>
 
