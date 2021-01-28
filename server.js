@@ -11,24 +11,15 @@ mongoose.connect('mongodb://localhost/blog', {
 })
 
 app.set('view engine', 'ejs')
-
-// Articles
 app.use(express.urlencoded({extended: false}))
-app.use('/articles', articleRouter)
-
-
 app.use(express.static(__dirname));
 
 // Access Views
-app.get('/', (req, res) => {
-    const articles = [{
-        title: "Test Article",
-        createdAt: new Date(),
-        description: "description",
-    }]
-    res.render('articles/index', {
-        articles: articles
-    })
+app.get('/', async (req, res) => {
+    const articles = await Article.find()
+    res.render('articles/index', {articles: articles})
 })
+
+app.use('/articles', articleRouter)
 
 app.listen(5000)

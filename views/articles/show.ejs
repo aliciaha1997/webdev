@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
     <link rel="icon" href="../css/logo.gif">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
 </head>
 
 <body>
@@ -19,11 +18,12 @@
     <%- include('../navbar') %>
 
     <div class="grid-container">
-        <h1 class="mb-4">New Article</h1>
+        <h1 class="mb-4"><%= article.title %></h1>
         <div class="card">
-            <form action="/articles" method="POST">
-                <%- include('_form_fields') %>
-            </form>
+            <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+                <div><%= article.markdown %></div>
+                <span><a href="/" class="button primary">All Articles</a>
+                    <a href="/articles/edit/<%= article.id %>" class="button warning">Edit</a></span>
         </div>
     </div>
 
