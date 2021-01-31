@@ -1,9 +1,33 @@
 body {
-    background: url(bg.jpg) no-repeat center center fixed;
+    cursor: url(../imgs/potion.png) 4 12, auto;
+    background: url(../imgs/shrine.gif) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.about {
+    background: url(../imgs/water.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.home {
+    background: url(../imgs/castle.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.cursor {
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 }
 
 img {
@@ -23,21 +47,23 @@ img {
 h1 {
     margin: 30px;
     color: whitesmoke;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h4 {
+    color:whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-group {
+    margin-inline: 50px;
 }
 
 .top-bar {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: transparent;
     height: 70px;
-}
-
-label {
-    font-size: 20px;
-}
-
-.form-group {
-    margin-inline: 50px;
 }
 
 .top-bar ul {
@@ -47,17 +73,14 @@ label {
 .top-bar li a {
     color: white;
     justify-content: center;
-    text-align: center;
-    vertical-align: middle;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 20px;
-    line-height: 70px;
 }
 
 .top-bar a:hover {
-    color: turquoise;
-    border: turquoise;
-}
+    color: #00af91;
+    border: #00af91;
+} 
 
 div {
     justify-content: center;
@@ -65,11 +88,12 @@ div {
 }
 
 .card {
+    margin-top: 10px;
     box-shadow: black;
     border-radius: 10px;
     background: rgba(255,255,255,0.5);
     padding: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif
 }
 
 footer {
@@ -79,4 +103,8 @@ footer {
     width: 100%;
     color: white;
     text-align: center;
+}
+
+.a.href button {
+    color: teal;
 }

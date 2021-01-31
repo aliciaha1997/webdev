@@ -2,58 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alicia Ngoc Diep Ha</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="/css/app.css" type="text/css">
-    <link rel="icon" href="../css/logo.gif">
+    <%- include('../templates/head') %>
 </head>
 
-<body>
-    <!-- Menu -->
-    <div class="top-bar">
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li><a href="#" class="hover">
-                    <figure>
-                        <img src="../css/planet.png" width=30px>
-                    </figure>
-                </a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>
-    </div>
+<body class="cursor">
+    <%- include('../templates/footer') %>
+    <%- include('../templates/navbar') %>
 
     <!-- Iterate articles-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="large-12 cell">
-                <h1 class=mb-5>Alicia's Blog</h1>
-                <a href="/articles/new" class="button success hollow large">Create New Article</a>
+                <h1 class=mb-5>Alicia's Blog <img src="../../imgs/book.gif" width="100px"></h1>
+                <a href="/articles/new" class="button success hollow warning large">Create New Article</a>
             </div>
         </div>
 
         <% articles.forEach(article => { %>
         <div class="card mt-6">
             <div class="card-body">
-                <h4 class="card-title">
+                <h4 class="card-title"><strong>
                     <%= article.title %>
+                </strong>
                 </h4>
                 <div class="card-subtitle text-muted mb-2">
                     <%= article.createdAt.toLocaleDateString() %>
                 </div>
                 <div class="card-text mb-2"><%=article.description %></div> 
             </div>
+            <a href="articles/<%= article.id %>" class="button">Read More</a>
         </div>
         <% })%>
 
     </div>
 
 </body>
-
-<footer>&copy; Copyright 2021 Alicia Ngoc Diep Ha</footer>
 
 
 </html>

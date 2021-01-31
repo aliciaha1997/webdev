@@ -1,8 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
+
+// Routes
 const articleRouter = require('./routes/articles')
+const aboutRouter = require('./routes/about')
+const homeRouter = require('./routes/home')
+const { use } = require('./routes/home')
+
+// Models
 const Article = require('./models/article')
-const { use } = require('./routes/articles')
+
 const app = express()
 
 mongoose.connect('mongodb://localhost/blog', {
@@ -16,10 +23,18 @@ app.use(express.static(__dirname));
 
 // Access Views
 app.get('/', async (req, res) => {
-    const articles = await Article.find()
-    res.render('articles/index', {articles: articles})
+    res.render('home')
 })
 
-app.use('/articles', articleRouter)
+app.get('/about', async (req, res) => {
+    res.render('./about/skills')
+})
+
+app.get('/articles', async (req, res) => {
+    const articles = await Article.find().sort({createdAt: 'desc'})
+    res.render('./articles/index', {articles: articles})
+})
+
+app.use('/home', homeRouter)
 
 app.listen(5000)

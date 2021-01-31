@@ -12,13 +12,13 @@ router.get('/',(req,res) => {
 })
 
 router.get('/new',(req,res) => {
-    res.render('articles/new', {article: new Article()})
+    res.render('/new', {article: new Article()})
 })
 
 router.get('/:id', async (req, res) => {
     const article = await Article.findById(req.params.id)
     if (article == null) res.redirect('/')
-    res.render('articles/show', {article: article})
+    res.render('/show', {article: article})
 })
 
 router.post('/', async (req, res) => {
@@ -29,11 +29,11 @@ router.post('/', async (req, res) => {
     })
     try{
         article = await article.save() //Get ID of saved article
-        res.redirect(`/articles/${article.id}`)
+        res.redirect(`/${article.id}`)
     }
     catch (e) {
         console.log(e)
-        res.render('articles/new', {article: article})
+        res.render('/new', {article: article})
     }
 })
 module.exports = router
