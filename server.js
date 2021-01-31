@@ -7,7 +7,7 @@ const aboutRouter = require('./routes/about')
 const homeRouter = require('./routes/home')
 const projectsRouter = require('./routes/projects')
 
-const { use } = require('./routes/home')
+const { use } = require('./routes/articles')
 
 // Models
 const Article = require('./models/article')
@@ -41,6 +41,8 @@ app.get('/projects', async (req, res) => {
     res.render('./projects/index')
 })
 
-app.use('/home', homeRouter)
+app.use('/articles', articleRouter)
+app.use('/', homeRouter)
+app.use('/about', aboutRouter)
 
 app.listen(5000)

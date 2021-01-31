@@ -6,19 +6,18 @@ const express = require('express')
 const router = express.Router()
 const Article = require('../models/article')
 
-
-router.get('/',(req,res) => {
+router.get('/articles',(req,res) => {
     res.send('In Articles')
 })
 
 router.get('/new',(req,res) => {
-    res.render('/new', {article: new Article()})
+    res.render('articles/new', {article: new Article()})
 })
 
 router.get('/:id', async (req, res) => {
     const article = await Article.findById(req.params.id)
     if (article == null) res.redirect('/')
-    res.render('/show', {article: article})
+    res.render('articles/show', {article: article})
 })
 
 router.post('/', async (req, res) => {
@@ -29,11 +28,11 @@ router.post('/', async (req, res) => {
     })
     try{
         article = await article.save() //Get ID of saved article
-        res.redirect(`/${article.id}`)
+        res.redirect(`articles/${article.id}`)
     }
     catch (e) {
         console.log(e)
-        res.render('/new', {article: article})
+        res.render('articles/new', {article: article})
     }
 })
 module.exports = router

@@ -25,27 +25,13 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.cursor {
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
-}
-
 img {
     vertical-align: middle;
-    padding: 0%;
-}
-
-.hover figure img {
-    opacity: 1;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.hover figure:hover img {
-    opacity: .5;
+    margin-bottom: 10px;
 }
 
 h1 {
-    margin: 30px;
+    margin: 20px;
     color: whitesmoke;
     text-align: center;
     font-family: 'Brush Script MT', Brush Script Std, cursive;
