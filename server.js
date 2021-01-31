@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const articleRouter = require('./routes/articles')
 const aboutRouter = require('./routes/about')
 const homeRouter = require('./routes/home')
+const projectsRouter = require('./routes/projects')
+
 const { use } = require('./routes/home')
 
 // Models
@@ -33,6 +35,10 @@ app.get('/about', async (req, res) => {
 app.get('/articles', async (req, res) => {
     const articles = await Article.find().sort({createdAt: 'desc'})
     res.render('./articles/index', {articles: articles})
+})
+
+app.get('/projects', async (req, res) => {
+    res.render('./projects/index')
 })
 
 app.use('/home', homeRouter)

@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js",
+    "preinstall": "npx npm-force-resolutions",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "keywords": [],
   "author": "",

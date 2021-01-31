@@ -5,10 +5,41 @@
     <%- include('../templates/head') %>
 </head>
 
-<body class="cursor about">
+<body class="about">
     <%- include('../templates/navbar') %>
-    <%- include('../templates/footer') %>
-<h1>Skills</h1>
+
+    <h1>About Me</h1>
+
+    <div class="row">
+        <div class="columns">
+            <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+                <li class="tabs-title is-active"><a href="#one" aria-selected="true">Tab 1</a></li>
+                <li class="tabs-title"><a href="#two">Tab 2</a></li>
+                <li class="tabs-title"><a href="#three">Tab 3</a></li>
+                <li class="tabs-title"><a href="#four">Tab 4</a></li>
+            </ul>
+
+            <div class="tabs-content" data-tabs-content="collapsing-tabs">
+                <div class="tabs-panel is-active" id="one">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+                <div class="tabs-panel" id="two">
+                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend
+                        nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl
+                        tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                </div>
+                <div class="tabs-panel" id="three">
+                    <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-3.jpg">
+                </div>
+                <div class="tabs-panel" id="four">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
