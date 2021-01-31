@@ -25,10 +25,21 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.projects {
+    background: url(../imgs/tavern.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
 img {
     vertical-align: middle;
     margin-bottom: 10px;
 }
+
 
 
 h1 {
@@ -43,9 +54,10 @@ h3 {
     overflow: hidden;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-  }
-  
-  h3:before, h3:after {
+}
+
+h3:before,
+h3:after {
     background-color: #000;
     content: "";
     display: inline-block;
@@ -53,17 +65,17 @@ h3 {
     position: relative;
     vertical-align: middle;
     width: 50%;
-  }
-  
-  h3:before {
+}
+
+h3:before {
     right: 0.5em;
     margin-left: -50%;
-  }
-  
-  h3:after {
+}
+
+h3:after {
     left: 0.5em;
     margin-right: -50%;
-  }
+}
 
 h4 {
     color: whitesmoke;
