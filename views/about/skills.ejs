@@ -19,7 +19,7 @@
                 <ul class="tabs" data-tabs id="collapsing-tabs">
                     <li class="tabs-title is-active"><a href="#education" aria-selected="true">Education</a></li>
                     <li class="tabs-title"><a href="#work">Work</a></li>
-                    <li class="tabs-title"><a href="#interests">Interests</a></li>
+                    <li class="tabs-title"><a href="#skills">Skills</a></li>
                     <li class="tabs-title"><a href="#other">Other</a></li>
                 </ul>
 
@@ -29,21 +29,27 @@
 
                         <%- include('_education_table') %>
 
-
                     </div>
                     <div class="tabs-panel" id="work">
                         <h3>Work</h3>
                     </div>
-                    <div class="tabs-panel" id="interests">
-                        <h3>Interests</h3>
+                    <div class="tabs-panel" id="skills">
+                        <h3>Skills</h3>
+
+                   <%- include('_skills_bars') %>
+
                     </div>
                     <div class="tabs-panel" id="other">
                         <h3>Other</h3>
+
                     </div>
                 </div>
             </div>
     </div>
     </div>
+
+
+
 </body>
 
 </html>

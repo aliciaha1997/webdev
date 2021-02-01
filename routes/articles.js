@@ -32,7 +32,8 @@ router.post('/', async (req, res) => {
     }
     catch (e) {
         console.log(e)
-        res.render('articles/new', {article: article})
+        res.render('projects')
+        //res.render('articles/new', {article: article})
     }
 })
 module.exports = router
