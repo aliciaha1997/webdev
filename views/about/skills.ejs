@@ -20,7 +20,7 @@
                     <li class="tabs-title is-active"><a href="#education" aria-selected="true">Education</a></li>
                     <li class="tabs-title"><a href="#work">Work</a></li>
                     <li class="tabs-title"><a href="#skills">Skills</a></li>
-                    <li class="tabs-title"><a href="#other">Volunteering/Other</a></li>
+                    <li class="tabs-title"><a href="#other">Other Activities</a></li>
                 </ul>
 
                 <div class="tabs-content" data-tabs-content="collapsing-tabs">
@@ -32,6 +32,8 @@
                     </div>
                     <div class="tabs-panel" id="work">
                         <h3>Work</h3>
+
+                        <%- include('_work_table') %>
                     </div>
                     <div class="tabs-panel" id="skills">
                         <h3>Skills</h3>
@@ -40,8 +42,7 @@
 
                     </div>
                     <div class="tabs-panel" id="other">
-                        <h3>Volunteering/Other</h3>
-
+                        <%- include('_other_list') %>
                     </div>
                 </div>
             </div>
