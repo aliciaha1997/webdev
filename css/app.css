@@ -20,7 +20,10 @@ body {
 .education {
     margin-top: 50px;
     width: 100%;
-    shadow: 10px;
+    box-shadow: 10px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: gold;
 }
 
 
@@ -115,6 +118,15 @@ h4 {
     background-color: transparent !important;
 }
 
+.download-btn {
+    border-radius: 0 10px;
+    background-color: darkred;
+    color: white;
+    width: 300px;
+    border-color: gold;
+    border-style: outset;
+    border-width: 5px;
+}
 
 
 .top-bar li a {
