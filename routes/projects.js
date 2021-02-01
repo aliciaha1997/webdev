@@ -6,33 +6,28 @@ const express = require('express')
 const router = express.Router()
 
 
-router.get('/',(req,res) => {
-    res.render('/projects')
+router.get('/projects',(req,res) => {
+    res.render('projects')
 })
 
-router.get('/new',(req,res) => {
-    res.render('/new', {article: new Article()})
+router.get('/air',(req,res) => {
+    res.render('projects/air')
 })
 
-router.get('/:id', async (req, res) => {
-    const article = await Article.findById(req.params.id)
-    if (article == null) res.redirect('/')
-    res.render('/show', {article: article})
+router.get('/agile',(req,res) => {
+    res.render('projects/agile')
 })
 
-router.post('/', async (req, res) => {
-    let article = new Article({
-        title: req.body.title,
-        description: req.body.description,
-        markdown: req.body.markdown,
-    })
-    try{
-        article = await article.save() //Get ID of saved article
-        res.redirect(`/${article.id}`)
-    }
-    catch (e) {
-        console.log(e)
-        res.render('/new', {article: article})
-    }
+router.get('/this',(req,res) => {
+    res.render('projects/this')
 })
+
+router.get('/garvan',(req,res) => {
+    res.render('projects/garvan')
+})
+
+router.get('/groupmates',(req,res) => {
+    res.render('projects/groupmates')
+})
+
 module.exports = router

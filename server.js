@@ -43,6 +43,7 @@ app.get('/projects', async (req, res) => {
 })
 
 app.use('/articles', articleRouter)
+app.use('/projects', projectsRouter)
 app.use('/', homeRouter)
 
 app.listen(5000)

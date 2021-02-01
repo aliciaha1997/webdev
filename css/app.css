@@ -17,6 +17,12 @@ body {
     margin-bottom: 70px;
 }
 
+.education {
+    margin-top: 50px;
+    width: 100%;
+    shadow: 10px;
+}
+
 
 .home {
     background: url(../imgs/castle.gif) no-repeat center center fixed;
@@ -40,6 +46,10 @@ body {
 img {
     vertical-align: middle;
     margin-bottom: 10px;
+}
+
+.grid-container {
+    width: 100%;
 }
 
 /* background: */
@@ -105,10 +115,6 @@ h4 {
     background-color: transparent !important;
 }
 
-.education {
-    border: 4px solid #ccc;
-    border-radius: 10px 10px 10px;
-}
 
 
 .top-bar li a {
@@ -123,16 +129,12 @@ h4 {
     border: #00af91;
 }
 
-div {
-    justify-content: center;
-    text-align: center;
-}
 
 .card {
     margin-top: 10px;
     box-shadow: black;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     font-family: 'Times New Roman', Times, serif
 }
