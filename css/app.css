@@ -13,12 +13,19 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 70px;
 }
 
 .tabs-panel {
     margin-bottom: 15px;
+}
+
+.title {
+    font-family: 'Brush Script MT', cursive;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-size: 100px;
 }
 
 
@@ -31,6 +38,7 @@ body {
     border-color: gold;
     font-size: 18px;
     padding: 5px;
+    font-family: 'Times New Roman';
 }
 
 .home {
@@ -39,7 +47,16 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Times New Roman', Times, serif;
+}
+
+figcaption, embed {
+    font-family: 'Times New Roman';
+    color: white;
+    padding-bottom: 30px;
+}
+
+p, li, body {
+    font-family: 'Times New Roman';
 }
 
 .projects {
@@ -97,15 +114,16 @@ progress {
 h1 {
     color: whitesmoke;
     text-align: center;
-    font-family: 'Brush Script MT', Brush Script Std, cursive;
+    font-family: 'Brush Script MT', cursive;
     text-shadow: 2px 2px black;
     font-size: 100px;
 }
 
+
 h3 {
     overflow: hidden;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman';
 }
 
 h3:before,
@@ -148,6 +166,31 @@ h4 {
     background-color: transparent !important;
 }
 
+/*Pagination*/
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    margin: 0 4px;
+    color: black;
+    float: left;
+    transition: background-color .3s;
+    border: 1px solid black;
+}
+.pagination a.active {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: lavender;
+}
+
+.section {
+    display: block;
+    pointer-events: none;
+}
 
 .download-btn {
     border-radius: 0 10px;
