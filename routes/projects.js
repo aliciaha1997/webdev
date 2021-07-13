@@ -30,4 +30,8 @@ router.get('/groupmates',(req,res) => {
     res.render('projects/groupmates')
 })
 
+router.get('/dashboards',(req,res) => {
+    res.render('projects/dashboards')
+})
+
 module.exports = router
